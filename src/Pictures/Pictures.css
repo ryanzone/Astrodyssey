@@ -1,0 +1,47 @@
+/* src/Pictures/Pictures.css */
+
+.apod-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.apod-card {
+  background: linear-gradient(to right, #211b35, #0d090f);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 106, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.apod-card:hover {
+  transform: scale(1.02);
+}
+
+.apod-title {
+  font-size: 1.2rem;
+  color: rgb(129, 75, 255);
+  margin-bottom: 0.5rem;
+}
+
+.apod-date {
+  font-size: 0.9rem;
+  color: rgb(31, 185, 212);
+  margin-bottom: 0.5rem;
+}
+
+.apod-image,
+.apod-video {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+.apod-explanation {
+  font-size: 0.85rem;
+  color: white;
+  opacity: 0.9;
+  text-align: justify;
+}
