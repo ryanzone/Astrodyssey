@@ -2,14 +2,14 @@ import '@fontsource/audiowide';
 import Background from './Background';
 import Transition from './Transition';
 import SpotlightCard from './SpotlightCard';
-import SpaceNewsGallery from './SpaceNewsGallery'; // <-- Imported here
+import SpaceNewsGallery from './SpaceNewsGallery'; 
 
 export default function Explore() {
   return (
     <div className="relative min-h-screen w-full bg-black overflow-x-hidden text-white">
       <Background />
 
-      {/* Scrollable Content Wrapper */}
+
       <div className="relative z-50 flex flex-col items-center justify-start pt-32 px-4 sm:px-6 pb-40">
         <Transition delay={0.3}>
           <div
@@ -22,7 +22,7 @@ export default function Explore() {
               textShadow: '0 0 20px #c5ced6',
               marginTop: '25vh',
               marginBottom: '50vh',
-              fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' // auto-resize text on mobile
+              fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' 
             }}
           >
             <SpotlightCard
@@ -43,7 +43,7 @@ export default function Explore() {
           </div>
         </Transition>
 
-        {/* ⬇️ Space News Gallery Section */}
+
         <div className="z-40 w-full max-w-5xl px-2 sm:px-4 mt-20">
           <SpaceNewsGallery />
         </div>
