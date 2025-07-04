@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "skipLibCheck": true, // ✅ THIS is what matters
+    "skipLibCheck": true, 
     "strict": true
   }
 }
