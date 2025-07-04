@@ -26,7 +26,7 @@
 
 .gooey-nav-container nav ul li {
   padding: 0.6em 1em;
-  border-radius: 8px; /* ⬅️ Was 100vw or very high — now it's more subtle */
+  border-radius: 8px; 
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
@@ -38,7 +38,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 8px; /* ⬅️ Match the new corner radius */
+  border-radius: 8px;
   background: white;
   opacity: 0;
   transform: scale(0);
@@ -55,7 +55,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.15); /* Less intense glow */
+  background: rgba(255, 255, 255, 0.15); 
   transform: scale(0);
   opacity: 0;
   z-index: -1;
@@ -64,7 +64,7 @@
 .gooey-nav-container .effect.filter::before {
   content: "";
   position: absolute;
-  inset: -50px; /* Was -75px */
+  inset: -50px; 
   z-index: -2;
   background: black;
 }
