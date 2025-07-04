@@ -5,18 +5,23 @@ It allows users to discover planets, stars, and cosmic phenomena through interac
 
 # Website Functionality
 
-- **Home** Features a fullscreen animated title with blur-text shader effects and particle galaxy background.                    
-- **About** Describes the project purpose, tech stack, and credits in a spotlight-style card.                                     
-- **Explore** Displays cosmic facts and star/planet data using NASA and Spaceflight APIs in a scrollable timeline layout.     
-- **Pictures** Shows the Astronomy Picture of the Day (APOD) for the last 4 days using NASA's API with title, date, and explanation. 
-- **Navigation** An animated **GooeyNav** with smooth transitions, particle effects, and dynamic selection animations.
+- Home: Fullscreen animated title with blur-text shader effects and particle galaxy background.
 
+- About: Highlights project goals, tech stack, and credits in a spotlight-style card layout.
+
+- Explore: Displays cosmic facts, space articles, and NASA data in a scrollable event timeline.
+
+- Pictures: Shows NASA’s Astronomy Picture of the Day (APOD) for the last 4 days, including titles, dates, and explanations.
+
+- Navigation: Interactive GooeyNav with smooth transitions, animated particles, and dynamic selection effects.
 
 # Installation/Setup instructions
-- npm install
+- Download the zip file of this repo or Clone it
+- npm install in cmd prompt
 - npm run dev
 - npm run build
 - npm run preview
+- Make sure you have node.js v18+ installed.
 
 # Unique Features
 - **GooeyNav:** A fully animated particle navigation system using canvas-like effects and keyboard accessibility.
