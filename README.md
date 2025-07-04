@@ -34,7 +34,7 @@ It allows users to discover planets, stars, and cosmic phenomena through interac
 
 - **Live Space Data:** Real-time APOD and space news from NASA & Spaceflight News APIs.
 
-# Tech Stack & Resource tools
+# Tech Stack, Dependencies & Resource tools
 ## Teck Stack:
 - Frontend: React, TypeScript, Vite, Tailwind CSS
 - Animations: Framer Motion
@@ -43,13 +43,22 @@ It allows users to discover planets, stars, and cosmic phenomena through interac
 - API Integration: NASA APOD API, Spaceflight News API
 - Hosting: Vercel
   
+## Dependencies (Packages, frameworks & libaries):
+- react
+- react-dom
+- vite
+- tailwindcss
+- framer-motion
+- react-router-dom
+- package.json
+
 ## Resource Tools:
-- NASA APIs: Astronomy Picture of the Day (APOD)
-- Spaceflight News API: Fetch latest articles & news in space exploration
-- Google Fonts: For unique typography (Audiowide)
-- ReactBits: UI & animation utility snippets inspiration
-- Stitch by Google: Particle effect inspiration & code references
-- ChatGPT by OpenAI: Project architecture & problem-solving guidance
+- NASA APIs: Astronomy Picture of the Day (APOD)  (https://api.nasa.gov/)
+- Spaceflight News API: Fetch latest articles & news in space exploration  (http://spaceflightnewsapi.net/)
+- Google Fonts: For unique typography, Audiowide was used for a space theme (https://fonts.google.com/)
+- ReactBits: UI & animation utility snippets inspiration (http://reactbits.dev/text-animations)
+- Stitch by Google: Particle effect inspiration & code references (https://stitch.withgoogle.com/)
+- ChatGPT by OpenAI: Project architecture & problem-solving guidance (https://chatgpt.com/)
 
 # Future Enhancements
 
