@@ -11,7 +11,7 @@ export default function Galaxy() {
     let cx = width / 2;
     let cy = height / 2;
 
-    // ✅ Add devicePixelRatio
+
     let dpr = window.devicePixelRatio || 1;
     canvas.width = width * dpr;
     canvas.height = height * dpr;
@@ -78,7 +78,7 @@ export default function Galaxy() {
       canvas.height = height * dpr;
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
-      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     };
 
