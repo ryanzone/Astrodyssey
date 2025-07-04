@@ -17,10 +17,10 @@ export default function App() {
         { label: 'Pictures' }
       ]} />
 
-      {/* Galaxy background */}
+
       <Galaxy />
 
-      {/* Sections */}
+
       <div id="home">
         <Hero />
       </div>
