@@ -22,14 +22,14 @@ export default function Pictures() {
       const apiKey = 'mFwwF4td68YulmkSY3TeMP346N6o35et2hIu8uwK';
       const today = new Date();
       const startDate = new Date();
-      startDate.setDate(today.getDate() - 3); // past 4 days
+      startDate.setDate(today.getDate() - 3); 
       const format = (d: Date) => d.toISOString().split('T')[0];
 
       const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&start_date=${format(startDate)}&end_date=${format(today)}`;
 
       const response = await fetch(url);
       const data = await response.json();
-      setApods(data.reverse()); // Newest first
+      setApods(data.reverse()); 
     };
 
     fetchAPODs();
