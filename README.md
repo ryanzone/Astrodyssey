@@ -1,24 +1,58 @@
 # Astrodyssey
 
 Astrodyssey is an immersive cosmic exploration web app built using React, TypeScript, and Vite. 
-It allows users to discover planets, stars, and celestial phenomena through interactive visuals, particle-based navigation, and real-time space data.
+It allows users to discover planets, stars, and cosmic phenomena through interactive visuals, space-themed navigation, and real-time space data.
 
-## 🚀 Features
+# Website Functionality
 
-- 🪐 Explore detailed facts about planets and stars
-- 📷 View NASA's Astronomy Picture of the Day
-- 📰 Read the latest space-related news articles
-- 🌠 Scroll through a dynamic timeline of cosmic events
-- 🧭 Gooey animated navigation bar
-- ✨ Fully responsive for desktop and mobile
+- **Home** Features a fullscreen animated title with blur-text shader effects and particle galaxy background.                    
+- **About** Describes the project purpose, tech stack, and credits in a spotlight-style card.                                     
+- **Explore** Displays cosmic facts and star/planet data using NASA and Spaceflight APIs in a scrollable timeline layout.     
+- **Pictures** Shows the Astronomy Picture of the Day (APOD) for the last 4 days using NASA's API with title, date, and explanation. 
+- **Navigation** An animated **GooeyNav** with smooth transitions, particle effects, and dynamic selection animations.
 
-## 🛠️ Built With
 
-- [React + Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- NASA APIs & Spaceflight News API
-- Custom particle and animation shaders
+# Installation/Setup instructions
+- npm install
+- npm run dev
+- npm run build
+- npm run preview
 
-## 📂 Project Structure
+# Unique Features
+- **GooeyNav:** A fully animated particle navigation system using canvas-like effects and keyboard accessibility.
+
+- **Event Timeline:** Scroll-based layout showcasing space events dynamically fetched from APIs.
+
+- **Responsive Design:** Optimized for both desktop and mobile with Tailwind CSS.
+
+- **Custom Backgrounds:** Galaxy shader and blur-text for futuristic atmosphere.
+
+- **Live Space Data:** Real-time APOD and space news from NASA & Spaceflight News APIs.
+
+# Tech Stack & Resource tools
+## Teck Stack:
+- Frontend: React, TypeScript, Vite, Tailwind CSS
+- Animations: Framer Motion
+- Fonts: Audiowide
+- Routing React Router DOM
+- API Integration: NASA APOD API, Spaceflight News API
+- Hosting: Vercel
+  
+## Resource Tools:
+- NASA APIs: Astronomy Picture of the Day (APOD)
+- Spaceflight News API: Fetch latest articles & news in space exploration
+- Google Fonts: For unique typography (Audiowide)
+- ReactBits: UI & animation utility snippets inspiration
+- Stitch by Google: Particle effect inspiration & code references
+- ChatGPT by OpenAI: Project architecture & problem-solving guidance
+
+# Future Enhancements
+
+Although some features couldn't be fully implemented within the project timeline, the following improvements are planned:
+
+- **AI-Powered Space Assistant**: An interactive chatbot to answer cosmic questions.
+- **Full Calendar View**: Clickable calendar to browse space events and APODs by date.
+- **3D Planetary Visualizer**: Real-time orbital simulation of planets and stars using Three.js.
+- **Location-Based Stargazing Tips**: Show constellations visible from the user’s location.
+
 
