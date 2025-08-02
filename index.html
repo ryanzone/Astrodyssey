@@ -1,13 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Astro(2).png" />
+    <title>AstrOdyssey</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Astrodyssey</title>
+
+    <!-- Style with Media Queries -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Audiowide', sans-serif;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      #root {
+        font-size: 2rem;
+      }
+
+      /* Small screens (phones) */
+      @media (max-width: 600px) {
+        body {
+          background-color: darkblue;
+        }
+
+        #root {
+          font-size: 1.2rem;
+        }
+      }
+
+      /* Medium screens (tablets) */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        body {
+          background-color: darkslategray;
+        }
+
+        #root {
+          font-size: 1.6rem;
+        }
+      }
+
+      /* Large screens (desktops) */
+      @media (min-width: 1025px) {
+        body {
+          background-color: black;
+        }
+
+        #root {
+          font-size: 2rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="root">Welcome to AstrOdyssey</div>
   </body>
 </html>
