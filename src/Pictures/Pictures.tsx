@@ -19,7 +19,7 @@ export default function Pictures() {
 
   useEffect(() => {
     const fetchAPODs = async () => {
-      const apiKey = 'mFwwF4td68YulmkSY3TeMP346N6o35et2hIu8uwK';
+      const apiKey = 'API_KEY';
       const today = new Date();
       const startDate = new Date();
       startDate.setDate(today.getDate() - 3); 
@@ -93,3 +93,4 @@ export default function Pictures() {
     </div>
   );
 }
+
