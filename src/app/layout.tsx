@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Oxanium } from "next/font/google";
+import Navbar from "@/components/navbar";
 
 const oxanium = Oxanium({
   subsets: ["latin"],
@@ -29,7 +30,11 @@ export default function RootLayout({
           touch-manipulation
         `}
       >
-        {children}
+        <Navbar />
+
+        <main className="pt-14">
+          {children}
+        </main>
       </body>
     </html>
   );
