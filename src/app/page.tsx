@@ -8,29 +8,30 @@ export default function Home() {
   const titleRef = useRef<HTMLDivElement>(null);
 
   const scrollToContent = () => {
-    titleRef.current?.scrollIntoView({
-      behavior: "smooth",
-    });
+    titleRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <main className="bg-black text-white overflow-x-hidden">
+    <main className="bg-black text-white overflow-x-hidden w-full min-h-screen font-oxanium">
 
       {/* ================= SUN HERO ================= */}
-      <section className="h-screen w-screen relative">
+      <section className="relative w-full min-h-[100svh] overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <HomeUniverse />
+        </div>
 
-        <HomeUniverse />
-
-        {/* scroll button */}
-        <div className="absolute bottom-12 w-full flex justify-center z-10">
+        <div className="absolute bottom-8 sm:bottom-12 w-full flex justify-center z-10">
           <button
             onClick={scrollToContent}
             className="
-              px-8 py-3
+              font-oxanium
+              px-6 sm:px-8
+              py-2.5 sm:py-3
               rounded-full
               border border-white/30
               text-white
-              tracking-widest
+              tracking-[0.3em]
+              text-sm sm:text-base
               backdrop-blur-xl
               bg-white/10
               hover:bg-white/20
@@ -45,23 +46,27 @@ export default function Home() {
       {/* ================= TITLE ================= */}
       <section
         ref={titleRef}
-        className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative"
+        className="
+          relative
+          w-full
+          min-h-[100svh]
+          flex
+          flex-col
+          items-center
+          justify-center
+          text-center
+          px-4 sm:px-6
+          font-oxanium
+        "
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-25"
-          style={{
-            backgroundImage: "url('/textures/milkyway.jpg')",
-          }}
-        />
-
         <div className="absolute inset-0 bg-black/70" />
 
         <div className="relative z-10 max-w-3xl">
-          <h1 className="text-6xl md:text-8xl font-bold tracking-widest mb-8">
-            AstroOdyssey
-          </h1>
+<h1 className="text-[clamp(2.4rem,9vw,4rem)] font-bold">
+  AstroOdyssey
+</h1>
 
-          <p className="text-gray-300 text-xl leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-xl leading-relaxed">
             A real-time 3D journey through planets, moons,
             rings and galaxies.
           </p>
@@ -69,14 +74,36 @@ export default function Home() {
       </section>
 
       {/* ================= PLANETS ================= */}
-      <section className="py-40 px-10 relative">
+      <section className="relative w-full py-24 sm:py-36 px-4 sm:px-10 font-oxanium">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
 
-        <h2 className="text-5xl text-center mb-20 relative z-10 tracking-widest">
+        <h2
+          className="
+            relative z-10
+            text-3xl sm:text-5xl
+            text-center
+            mb-14 sm:mb-20
+            tracking-[0.25em]
+            sm:tracking-[0.35em]
+            font-semibold
+            font-oxanium
+          "
+        >
           EXPLORE
         </h2>
 
-        <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
+        <div
+          className="
+            relative z-10
+            grid
+            grid-cols-2
+            sm:grid-cols-3
+            lg:grid-cols-4
+            gap-5
+            max-w-6xl
+            mx-auto
+          "
+        >
           {[
             { name: "Mercury", path: "/planets/mercury" },
             { name: "Venus", path: "/planets/venus" },
@@ -93,20 +120,33 @@ export default function Home() {
               className="
                 group
                 relative
-                rounded-2xl
-                border border-white/15
+                h-[70px] sm:h-[85px]
+                rounded-xl
+                border border-white/20
                 bg-white/5
                 backdrop-blur-xl
-                p-10
-                text-center
+                flex
+                items-center
+                justify-center
                 transition
-                hover:scale-110
+                sm:hover:scale-105
                 hover:border-blue-500
+                font-oxanium
               "
             >
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition bg-blue-500/10" />
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition bg-blue-500/10" />
 
-              <p className="relative z-10 text-xl tracking-widest">
+              <p
+                className="
+                  relative z-10
+                  text-[0.7rem] sm:text-sm
+                  font-medium
+                  tracking-[0.18em]
+                  sm:tracking-[0.25em]
+                  text-white
+                  font-oxanium
+                "
+              >
                 {planet.name.toUpperCase()}
               </p>
             </Link>

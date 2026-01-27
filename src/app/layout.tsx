@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Space_Mono } from "next/font/google";
 import "./globals.css";
+import { Oxanium } from "next/font/google";
 
-const spaceMono = Space_Mono({
+const oxanium = Oxanium({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-space",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,16 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="
+        className={`
+          ${oxanium.className}
           bg-black
           text-white
-          font-mono
           overscroll-none
           touch-manipulation
-        "
-        style={{
-          fontFamily: "var(--font-space)",
-        }}
+        `}
       >
         {children}
       </body>

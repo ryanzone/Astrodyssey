@@ -1,4 +1,4 @@
- /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -14,18 +14,22 @@ module.exports = {
         "secondary-400": "#FFCD5B",
         "secondary-500": "#FFC132",
       },
-      backgroundImage: (theme) => ({
+
+      backgroundImage: {
         "gradient-blued": "linear-gradient(90deg, #000066 0%, #3333ff 100%)",
         "mobile-home": "url('./assets/HomePageGraphic.png')",
-      }),
+      },
+
       fontFamily: {
+        oxanium: ["var(--font-oxanium)", "sans-serif"],
+
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
-        audiowide: ['Audiowide', 'sans-serif'],
-        orbitron: ['Orbitron', 'sans-serif'],
-        pixel: ['"Press Start 2P"', 'monospace'],
-
+        audiowide: ["Audiowide", "sans-serif"],
+        orbitron: ["Orbitron", "sans-serif"],
+        pixel: ['"Press Start 2P"', "monospace"],
       },
+
       content: {
         evolvetext: "url('./assets/EvolveText.png')",
         abstractwaves: "url('./assets/AbstractWaves.png')",
@@ -33,6 +37,7 @@ module.exports = {
         circles: "url('./assets/Circles.png')",
       },
     },
+
     screens: {
       xs: "480px",
       sm: "768px",
