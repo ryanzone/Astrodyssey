@@ -1,24 +1,52 @@
 "use client";
 
 import HomeUniverse from "@/components/three/HomeUniverse";
+import { useRef } from "react";
 import Link from "next/link";
 
 export default function Home() {
+  const titleRef = useRef<HTMLDivElement>(null);
+
+  const scrollToContent = () => {
+    titleRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <main className="bg-black text-white overflow-x-hidden">
 
       {/* ================= SUN HERO ================= */}
       <section className="h-screen w-screen relative">
+
         <HomeUniverse />
 
-        <div className="absolute bottom-10 w-full text-center text-gray-400 animate-bounce z-10">
-          ↓ Scroll
+        {/* scroll button */}
+        <div className="absolute bottom-12 w-full flex justify-center z-10">
+          <button
+            onClick={scrollToContent}
+            className="
+              px-8 py-3
+              rounded-full
+              border border-white/30
+              text-white
+              tracking-widest
+              backdrop-blur-xl
+              bg-white/10
+              hover:bg-white/20
+              transition
+            "
+          >
+            EXPLORE ↓
+          </button>
         </div>
       </section>
 
       {/* ================= TITLE ================= */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative">
-
+      <section
+        ref={titleRef}
+        className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative"
+      >
         <div
           className="absolute inset-0 bg-cover bg-center opacity-25"
           style={{
@@ -42,7 +70,6 @@ export default function Home() {
 
       {/* ================= PLANETS ================= */}
       <section className="py-40 px-10 relative">
-
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
 
         <h2 className="text-5xl text-center mb-20 relative z-10 tracking-widest">
@@ -50,7 +77,6 @@ export default function Home() {
         </h2>
 
         <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
-
           {[
             { name: "Mercury", path: "/planets/mercury" },
             { name: "Venus", path: "/planets/venus" },

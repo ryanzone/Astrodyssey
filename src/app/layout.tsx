@@ -21,7 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceMono.variable} font-mono bg-black text-white`}
+        className="
+          bg-black
+          text-white
+          font-mono
+          overscroll-none
+          touch-manipulation
+        "
+        style={{
+          fontFamily: "var(--font-space)",
+        }}
       >
         {children}
       </body>
