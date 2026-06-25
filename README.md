@@ -1,9 +1,6 @@
-![image alt](https://github.com/ryanzone/Astrodyssey/blob/master/ss/astro.jpg)
-
-
+![Astrodyssey](ss/astro.jpg)
 Astrodyssey is an interactive space-themed web app built with **Next.js** + **React Three Fiber**. It displays NASA images (APOD) and provides a chatbot interface powered by a Python backend.
 
-![Astrodyssey](ss/astro.jpg)
 
 ---
 
