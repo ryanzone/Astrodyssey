@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { sendChat } from "@/core/api";
+import { sendChat } from "../../core/api";
 
 type Message = {
   role: "user" | "ai";

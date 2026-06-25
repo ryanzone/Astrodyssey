@@ -22,11 +22,10 @@ def chat(req: ChatRequest):
     try:
         completion = client.chat.completions.create(
             model="llama-3.1-8b-instant",
-
             messages=[
                 {
                     "role": "system",
-                    "content": "You are SpaceGen AI, an expert in astronomy."
+                    "content": "You are SpaceGen AI. Answer in exactly 1-2 sentences only. Be concise."
                 },
                 {
                     "role": "user",
@@ -34,6 +33,7 @@ def chat(req: ChatRequest):
                 }
             ],
             temperature=0.6,
+            max_tokens=80  # More aggressive limit
         )
 
         return {

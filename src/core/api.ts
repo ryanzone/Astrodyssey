@@ -1,17 +1,27 @@
 const BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL!;
 
+export const TEST = "working";
+
 export async function getApod(date?: string) {
   const url = date
     ? `${BASE_URL}/nasa/apod?date=${date}`
     : `${BASE_URL}/nasa/apod`;
 
-  const res = await fetch(url);
+  console.log("Fetching from:", url);
+  console.log("BASE_URL env:", process.env.NEXT_PUBLIC_BACKEND_URL);
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch APOD");
+  try {
+    const res = await fetch(url);
+    console.log("Response status:", res.status);
+    
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+    }
+    return res.json();
+  } catch (error) {
+    console.error("Fetch error:", error);
+    throw error;
   }
-
-  return res.json();
 }
 
 export async function sendChat(message: string) {
@@ -29,3 +39,4 @@ export async function sendChat(message: string) {
 
   return res.json();
 }
+
