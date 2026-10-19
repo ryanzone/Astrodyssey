@@ -4,12 +4,15 @@ from flask import Flask, request, jsonify  # or FastAPI if you're using that
 
 app = Flask(__name__)
 
+from dotenv import load_dotenv
+load_dotenv()
+
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def chat_with_ai(message: str):
     try:
         completion = client.chat.completions.create(
-            model="llama3-70b-8192",
+            model="qwen/qwen3.8-27b",
             messages=[
                 {
                     "role": "system",
